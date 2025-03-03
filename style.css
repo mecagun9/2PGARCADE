@@ -1,0 +1,26 @@
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-item {
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.game-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game-image {
+    width: 80%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
