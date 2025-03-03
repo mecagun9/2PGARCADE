@@ -1,26 +1,124 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* 헤더 스타일 */
+header {
+    background: #222;
+    color: white;
+    padding: 15px 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 메인 컨테이너 */
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 게임 리스트 스타일 */
 .game-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px 0;
 }
 
+/* 개별 게임 카드 */
 .game-item {
-    width: 300px;
-    padding: 10px;
+    width: 280px;
+    background: white;
+    padding: 15px;
     text-align: center;
-    border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
 }
 
 .game-item img {
     width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
+.game-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.game-item a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.game-item a:hover {
+    text-decoration: underline;
+}
+
+/* 개별 게임 페이지 스타일 */
 .game-image {
-    width: 80%;
+    width: 100%;
     max-width: 500px;
     display: block;
     margin: 20px auto;
+    border-radius: 10px;
+}
+
+.game-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.game-details h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.game-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.game-details li {
+    background: #f0f0f0;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* 푸터 스타일 */
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
 }
