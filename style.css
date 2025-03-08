@@ -1,32 +1,26 @@
-/* 전체 폰트 스타일 (세가 스타일) */
-/* 헤더와 주요 타이틀은 좀 더 깔끔한 폰트 */
-/* 기본 스타일 */
+/* 전체 폰트 적용 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #005BAC; /* 세가 블루 */
+    color: white;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #005BAC; /* 세가 블루 */
-    color: white; /* 기본 글자색 */
 }
 
-/* 헤더 스타일 */
-header {
-    background: #003F88; /* 진한 블루 */
-    padding: 15px 0;
-}
-
+/* 제목(h1, h2, h3)에는 둥근모 적용 */
 h1, h2, h3 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'DungGeunMo', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* 네비게이션 바 */
-nav {
-    margin-top: 10px;
+/* 본문 텍스트 */
+p, nav, footer {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* 네비게이션 */
 nav a {
     color: white;
     margin: 0 15px;
@@ -37,7 +31,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #FFD700; /* 골드 효과 */
+    color: #FFD700; /* 골드 */
 }
 
 /* 메인 섹션 */
@@ -45,84 +39,15 @@ section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* 살짝 투명한 블루 */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* 게임 리스트 스타일 */
-.game-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-/* 개별 게임 카드 */
-.game-item {
-    width: 280px;
-    background: rgba(255, 255, 255, 0.1); /* 살짝 투명한 화이트 */
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out;
-}
-
-.game-item:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.game-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.game-item h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.game-item a {
-    text-decoration: none;
-    color: #FFD700; /* 골드 효과 */
-    font-weight: bold;
-}
-
-.game-item a:hover {
-    text-decoration: underline;
-}
-
-/* 개별 게임 페이지 스타일 */
-.game-image {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 10px;
-}
-
 /* 푸터 */
 footer {
-    background: #003F88; /* 네이비 블루 */
+    background: #003F88;
     color: white;
     padding: 10px;
     margin-top: 40px;
-}
-
-/* 인스타그램 아이콘 */
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-    filter: invert(1); /* 흰색 아이콘 효과 */
-    transition: transform 0.2s;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(300deg); /* 인스타그램 컬러 */
 }
