@@ -113,3 +113,14 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 91, 172, 0.3);
 }
+
+/* 공모전 접수 버튼 스타일 (차별화) */
+.register-button {
+    background-color: #FFD700; /* 골드 */
+    color: #005BAC;
+}
+
+.register-button:hover {
+    background-color: #FFCC00; /* 더 밝은 골드 */
+    color: #003F88;
+}
