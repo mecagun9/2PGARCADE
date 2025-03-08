@@ -104,3 +104,12 @@ footer {
     transform: scale(1.1);
     filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(300deg); /* 인스타 컬러 */
 }
+
+.contest-poster {
+    width: 100%;
+    max-width: 600px; /* 최대 크기 제한 */
+    display: block;
+    margin: 20px auto; /* 가운데 정렬 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 91, 172, 0.3);
+}
