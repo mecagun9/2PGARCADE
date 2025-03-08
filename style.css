@@ -1,53 +1,106 @@
-/* 전체 폰트 적용 */
+/* 전체 페이지 기본 스타일 */
 body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #005BAC; /* 세가 블루 */
-    color: white;
+    background-color: #FFFFFF; /* 흰색 배경 */
+    color: #005BAC; /* 세가 블루 텍스트 */
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* 제목(h1, h2, h3)에는 둥근모 적용 */
-h1, h2, h3 {
+/* 헤더 스타일 */
+header {
+    background: #005BAC; /* 세가 블루 */
+    color: white;
+    padding: 20px 0;
+}
+
+h1 {
     font-family: 'DungGeunMo', sans-serif;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* 본문 텍스트 */
-p, nav, footer {
-    font-family: 'Noto Sans KR', sans-serif;
+/* 네비게이션 */
+nav {
+    margin-top: 10px;
 }
 
-/* 네비게이션 */
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    text-decoration: underline;
-    color: #FFD700; /* 골드 */
+    background-color: #FFD700; /* 골드 */
+    color: #005BAC; /* 세가 블루 */
 }
 
-/* 메인 섹션 */
+/* 섹션 */
 section {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
+    border: 2px solid #005BAC; /* 세가 블루 테두리 */
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 8px rgba(0, 91, 172, 0.3);
+}
+
+/* 제목 스타일 */
+h2, h3 {
+    font-family: 'DungGeunMo', sans-serif;
+    color: #005BAC;
+    font-weight: 700;
+}
+
+/* 본문 스타일 */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 버튼 스타일 */
+.button {
+    display: inline-block;
+    background-color: #005BAC;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #FFD700; /* 골드 */
+    color: #005BAC; /* 세가 블루 */
 }
 
 /* 푸터 */
 footer {
-    background: #003F88;
+    background: #005BAC;
     color: white;
-    padding: 10px;
+    padding: 15px;
     margin-top: 40px;
+}
+
+/* 인스타그램 아이콘 */
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    filter: invert(1); /* 흰색 아이콘 효과 */
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(300deg); /* 인스타 컬러 */
 }
