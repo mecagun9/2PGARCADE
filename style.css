@@ -22,25 +22,31 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* 네비게이션 */
+/* 네비게이션 스타일 */
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #005BAC; /* 세가 블루 */
+    flex-wrap: wrap; /* 모바일 대응 */
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
+    transition: background 0.3s ease-in-out;
 }
 
 nav a:hover {
     background-color: #FFD700; /* 골드 */
-    color: #005BAC; /* 세가 블루 */
+    color: #005BAC;
 }
+
 
 /* 섹션 */
 section {
