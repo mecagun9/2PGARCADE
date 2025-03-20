@@ -193,7 +193,7 @@ footer {
     color: #005BAC;
 }
 
-/* 게임 갤러리 스타일 */
+/* 게임 갤러리 (전체 레이아웃) */
 .game-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -217,12 +217,13 @@ footer {
     transform: scale(1.05);
 }
 
-/* 게임 이미지 (4:3 비율 유지) */
+/* 게임 이미지 (4:3 비율 유지 & 자동 크기 조절) */
 .game-card img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
+    width: 100%; /* 컨테이너 크기에 맞게 조정 */
+    max-width: 100%; /* 넘치지 않도록 제한 */
+    aspect-ratio: 4 / 3; /* 4:3 비율 유지 */
+    object-fit: cover; /* 비율을 유지하면서 넘치는 부분 자동 조정 */
     border-radius: 5px;
-    object-fit: cover;
 }
 
 /* 게임 제목 */
