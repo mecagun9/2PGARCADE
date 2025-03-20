@@ -211,6 +211,7 @@ footer {
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 91, 172, 0.3);
     transition: transform 0.2s ease-in-out;
+    overflow: hidden; /* 이미지가 넘치지 않도록 제한 */
 }
 
 .game-card:hover {
@@ -220,9 +221,11 @@ footer {
 /* 게임 이미지 (4:3 비율 유지 & 자동 크기 조절) */
 .game-card img {
     width: 100%; /* 컨테이너 크기에 맞게 조정 */
+    height: auto; /* 비율 유지 */
     max-width: 100%; /* 넘치지 않도록 제한 */
     aspect-ratio: 4 / 3; /* 4:3 비율 유지 */
     object-fit: cover; /* 비율을 유지하면서 넘치는 부분 자동 조정 */
+    display: block;
     border-radius: 5px;
 }
 
