@@ -59,7 +59,7 @@ section {
     margin: 40px auto;
     padding: 20px;
     background: white;
-    border: 2px solid #005BAC; /* 세가 블루 테두리 */
+    /* border: 2px solid #005BAC;  세가 블루 테두리 */
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 91, 172, 0.3);
 }
