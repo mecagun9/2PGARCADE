@@ -215,7 +215,7 @@
   section { padding: 80px 60px; border-bottom: 4px solid var(--border); position: relative; z-index: 1; }
   .section-label {
     /* 섹션 라벨(잼 소개/공모전 규칙 등) 텍스트 크기 */
-    font-size: 0.5rem;
+    font-size: 2.4rem;
     letter-spacing: 3px;
     color: var(--primary);
     text-transform: uppercase;
@@ -364,8 +364,7 @@
 
 <div class="stats-bar">
   <div class="stat-item"><span class="stat-label">용량 제한</span><span class="stat-value">1.44 MB</span></div>
-  <div class="stat-item"><span class="stat-label">기간</span><span class="stat-value">3주</span></div>
-  <div class="stat-item"><span class="stat-label">플랫폼</span><span class="stat-value">ITCH.IO</span></div>
+  <div class="stat-item"><span class="stat-label">기간</span><span class="stat-value">~26.9.4일까지</span></div>
   <div class="stat-item"><span class="stat-label">참가 대상</span><span class="stat-value">누구나</span></div>
   <div class="stat-item"><span class="stat-label">상금</span><span class="stat-value">미정</span></div>
   <div class="stat-item"><span class="stat-label">엔진</span><span class="stat-value">자유</span></div>
@@ -376,8 +375,8 @@
   <h2 class="section-title">왜 1.44MB인가?</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>1987년, 3.5인치 플로피 디스크에는 정확히 <strong>1,474,560 바이트</strong>가 담겼습니다. 이 공모전은 그런걸 좋아하는 분들을 위한 도전입니다.</p>
-      <p>1.44MB안에서 게임을 만드세요. 물론 재미있어야 합니다.<strong>얼마나 큰 용량인지만 </strong>잊지마세요.</p>
+      <p>1997년,하이텔 게임제작 동호회에서 개최한 "<strong>100Kbyte</strong>게임 공모전"을 모티브로 재미있는 시도를 하려고 합니다.</p>
+      <p>1.44MB 이하 게임 개발 공모전을 개최 합니다<strong>얼마나 큰 용량인지만 </strong>잊지마세요.</p>
     </div>
     <div class="floppy-wrap">
       <svg class="floppy-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="플로피 디스크 일러스트" role="img">
@@ -405,6 +404,7 @@
     <div class="rule-card"><div class="rule-num">05</div><div class="rule-title">솔로 또는 팀</div><div class="rule-desc">개인 또는 팀 제출 모두 가능합니다.</div></div>
     <div class="rule-card"><div class="rule-num">06</div><div class="rule-title">콘텐츠</div><div class="rule-desc">상식선에서의 제작 가이드라인을 준수해야 합니다.(지나친 성적묘사, 폭력등 금지)</div></div>
     <div class="rule-card"><div class="rule-num">07</div><div class="rule-title">개발시작시기</div><div class="rule-desc">공모전 공식 발표일로 부터 새로 제작된 게임이어야 합니다.</div></div>
+    <div class="rule-card"><div class="rule-num">08</div><div class="rule-title">심사기준</div><div class="rule-desc">작성중</div></div>
   </div>
 </section>
 
@@ -412,8 +412,8 @@
   <div class="section-label">진행 일정</div>
   <h2 class="section-title">날짜를 기억하세요</h2>
   <div class="timeline">
-    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 DAY 0 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:0.8rem;color:var(--gray)">DAY 0</span></div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">공모전 공개</div><div class="tl-desc">테마 공개. 개발 시작. 제출처 오픈.</div></div></div>
-    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 마감일 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:0.8rem;color:var(--gray)">2026. 9.4</span></div><div class="tl-dot" style="background:var(--accent);border-color:var(--accent)"></div><div class="tl-content"><div class="tl-title">제출 마감</div><div class="tl-desc">23:39까지 제출</div></div></div>
+    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 DAY 0 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:1.5rem;color:var(--gray)">DAY 0</span></div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">공모전 공개</div><div class="tl-desc">테마 공개. 개발 시작. 제출처 오픈.</div></div></div>
+    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 마감일 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:1.5rem;color:var(--gray)">2026. 9.4</span></div><div class="tl-dot" style="background:var(--accent);border-color:var(--accent)"></div><div class="tl-content"><div class="tl-title">제출 마감</div><div class="tl-desc">23:39까지 제출</div></div></div>
   </div>
 </section>
 
@@ -440,13 +440,13 @@
   <div class="cta-title">준비됐나요?<br>담아보세요<span class="cursor"></span></div>
   <p class="cta-sub">1,474,560 바이트. 한 바이트도 낭비하지 마세요.</p>
   <!-- 하단 CTA '게임제출하기' 버튼 텍스트 크기(font-size:0.9rem) -->
-  <a href="https://itch.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:2rem;padding:18px 48px">게임제출하기</a>
+  <a href="https://forms.gle/BLaabf5hqMDibkcw9" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:2rem;padding:18px 48px">게임제출하기</a>
 </section>
 
 <footer>
   <div>1.44MB GAME CONTEST</div>
   <div>
-    Hosted on <a href="https://itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a> ·
+    Hosted on <a href="https://forms.gle/BLaabf5hqMDibkcw9" target="_blank" rel="noopener noreferrer">구글폼</a> ·
     <a href="index.html">2P 게임 아케이드</a>
   </div>
 </footer>
