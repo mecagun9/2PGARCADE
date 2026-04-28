@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1.44MB GAME_DEV CONTEST / 플로피디스크 한장에 담기는 게임 공모전 </title>
+<title>1.44MB GAME_DEV CONTEST</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DungGeunMo&family=Noto+Sans+KR:wght@400;700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
@@ -16,9 +16,9 @@
     navSponsors: "후원",
     navFaq: "FAQ",
     navJoin: "참가하기",
-    heroTag: "by. 2P GAME ARCADE",
+    heroTag: "Define the Future",
     heroSubtitle: "~2026.9.4까지",
-    heroDesc1: "1바이트가 중요합니다. 3.5인치 디스켓 한 장에 들어가는 게임을 만드세요.",
+    heroDesc1: "3.5인치 디스켓 한 장에 들어가는 게임을 만드세요.",
     heroDesc2: "1,474,560 바이트.",
     heroDesc3: "그 이상도, 예외도 없습니다.",
     btnSubmit: "게임 제출하기",
@@ -97,13 +97,13 @@
     font-family: 'Press Start 2P', monospace;
   }
 
-  .nav-logo { /* 상단 왼쪽 로고 텍스트 크기 */ font-size: 0.75rem; color: var(--primary); letter-spacing: 1px; }
+  .nav-logo { /* 상단 왼쪽 로고 텍스트 크기 */ font-size: 1.5rem; color: var(--primary); letter-spacing: 1px; }
   .nav-links { display: flex; gap: 24px; list-style: none; }
   .nav-links a {
-    color: var(--gray);
+    color: var(--white);
     text-decoration: none;
     /* 상단 메뉴 링크 텍스트 크기 */
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     padding: 4px 8px;
@@ -135,7 +135,7 @@
 
   .hero-tag {
     /* 히어로 상단 태그(by. 2P GAME ARCADE) 텍스트 크기 */
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     letter-spacing: 3px;
     color: var(--cyan);
     margin-bottom: 24px;
@@ -216,7 +216,7 @@
   section { padding: 80px 60px; border-bottom: 4px solid var(--border); position: relative; z-index: 1; }
   .section-label {
     /* 섹션 라벨(잼 소개/공모전 규칙 등) 텍스트 크기 */
-    font-size: 0.5rem;
+    font-size: 2.4rem;
     letter-spacing: 3px;
     color: var(--primary);
     text-transform: uppercase;
@@ -252,61 +252,11 @@
   .prizes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
   .prize-card { border: 3px solid var(--border); padding: 40px 24px; text-align: center; background: var(--bg2); box-shadow: 4px 4px 0 var(--bg3); }
   .prize-card.gold { border-color: var(--accent); box-shadow: 4px 4px 0 #7a5000; }
-  .prize-card.sponsor { border-color: var(--cyan); box-shadow: 4px 4px 0 #24576a; }
   .prize-rank { /* 시상 이모지(🥇/🥈/🏅) 텍스트 크기 */ font-size: 3rem; line-height: 1; margin-bottom: 12px; }
   .prize-title { /* 시상 등급명(대상/금상/은상) 텍스트 크기 */ font-size: 0.5rem; letter-spacing: 2px; color: var(--gray); margin-bottom: 16px; text-transform: uppercase; }
   .prize-reward { /* 시상 보상 텍스트(미정/특별상) 크기 */ font-size: 1rem; color: var(--cyan); }
   .gold .prize-reward { color: var(--accent); }
   .prize-note { /* 시상 금액 보조 텍스트 크기 */ font-size: 0.85rem; color: var(--gray); margin-top: 10px; }
-
-  .sponsors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-top: 20px;
-  }
-
-  .sponsor-card {
-    border: 3px solid var(--border);
-    background: var(--bg2);
-    padding: 20px;
-    box-shadow: 4px 4px 0 var(--bg3);
-  }
-
-  .sponsor-logo-slot {
-    border: 3px dashed var(--cyan);
-    background:
-      linear-gradient(rgba(83,216,251,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(83,216,251,0.07) 1px, transparent 1px),
-      var(--bg);
-    background-size: 8px 8px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 14px;
-    color: var(--cyan);
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 1px;
-    text-align: center;
-    line-height: 1.6;
-    text-transform: uppercase;
-  }
-
-  .sponsor-name {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 0.55rem;
-    color: var(--accent);
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-  }
-
-  .sponsor-desc {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: var(--gray);
-  }
 
   .criteria-table { width: 100%; border-collapse: collapse; margin-top: 20px; /* 심사 기준 표 기본 텍스트 크기 */ font-size: 1rem; border: 3px solid var(--border); }
   .criteria-table th { text-align: left; padding: 14px 20px; background: var(--bg3); color: var(--cyan); /* 심사 기준 표 헤더 텍스트 크기 */ font-size: 0.5rem; border-bottom: 3px solid var(--border); }
@@ -380,7 +330,7 @@
 </head>
 <body>
 <nav>
-  <div class="nav-logo">1.44MB_GAME_CONTEST</div>
+  <div class="nav-logo">By 2PGameArcade</div>
   <ul class="nav-links">
     <li><a href="#about" data-copy="navIntro"></a></li>
     <li><a href="#rules" data-copy="navRules"></a></li>
@@ -416,20 +366,19 @@
 
 <div class="stats-bar">
   <div class="stat-item"><span class="stat-label">용량 제한</span><span class="stat-value">1.44 MB</span></div>
-  <div class="stat-item"><span class="stat-label">기간</span><span class="stat-value">3주</span></div>
-  <div class="stat-item"><span class="stat-label">플랫폼</span><span class="stat-value">ITCH.IO</span></div>
+  <div class="stat-item"><span class="stat-label">기간</span><span class="stat-value">~26.9.4일까지</span></div>
   <div class="stat-item"><span class="stat-label">참가 대상</span><span class="stat-value">누구나</span></div>
   <div class="stat-item"><span class="stat-label">상금</span><span class="stat-value">미정</span></div>
   <div class="stat-item"><span class="stat-label">엔진</span><span class="stat-value">자유</span></div>
 </div>
 
 <section id="about">
-  <div class="section-label">잼 소개</div>
+  <div class="section-label">공모전 소개</div>
   <h2 class="section-title">왜 1.44MB인가?</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>1987년, 3.5인치 플로피 디스크에는 정확히 <strong>1,474,560 바이트</strong>가 담겼습니다. 이 공모전은 그런걸 좋아하는 분들을 위한 도전입니다.</p>
-      <p>1.44MB안에서 게임을 만드세요. 물론 재미있어야 합니다.<strong>얼마나 큰 용량인지만 </strong>잊지마세요.</p>
+      <p>1997년,하이텔 게임제작 동호회에서 개최한 "<strong>100Kbyte</strong>게임 공모전"을 모티브로 재미있는 시도를 하려고 합니다.</p>
+      <p>1.44MB 이하 게임 개발 공모전을 개최 합니다<strong>얼마나 큰 용량인지만 </strong>잊지마세요.</p>
     </div>
     <div class="floppy-wrap">
       <svg class="floppy-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="플로피 디스크 일러스트" role="img">
@@ -453,9 +402,11 @@
     <div class="rule-card"><div class="rule-num">01</div><div class="rule-title">용량 제한</div><div class="rule-desc">압축 해제 후 전체 용량이 1,474,560 바이트 이하여야 합니다.</div></div>
     <div class="rule-card"><div class="rule-num">02</div><div class="rule-title">오리지널 작품</div><div class="rule-desc">공모전 공개후 제작되어야 하며, 제출 마감일 밤 11:59분까지 접수해야 합니다.</div></div>
     <div class="rule-card"><div class="rule-num">03</div><div class="rule-title">엔진 자유(하지만 쓸수있을까...?)</div><div class="rule-desc">엔진 제한 없음. 단 실행 파일/런타임 포함 용량을 초과하면 안됩니다.</div></div>
-    <div class="rule-card"><div class="rule-num">04</div><div class="rule-title">플레이 가능</div><div class="rule-desc">별도의 실행파일로 플레이 가능한 게임이어야 합니다.(콘솔게임)</div></div>
+    <div class="rule-card"><div class="rule-num">04</div><div class="rule-title">실행파일 </div><div class="rule-desc">독립 실행파일로 플레이 가능한 게임이어야 합니다.(웹브라우저 게임 금지)</div></div>
     <div class="rule-card"><div class="rule-num">05</div><div class="rule-title">솔로 또는 팀</div><div class="rule-desc">개인 또는 팀 제출 모두 가능합니다.</div></div>
-    <div class="rule-card"><div class="rule-num">06</div><div class="rule-title">콘텐츠</div><div class="rule-desc">상식선에서의 제작 가이드라인을 준수해야 합니다.(지나친 성적묘사, 폭력금지)</div></div>
+    <div class="rule-card"><div class="rule-num">06</div><div class="rule-title">콘텐츠</div><div class="rule-desc">상식선에서의 제작 가이드라인을 준수해야 합니다.(지나친 성적묘사, 폭력등 금지)</div></div>
+    <div class="rule-card"><div class="rule-num">07</div><div class="rule-title">개발시작시기</div><div class="rule-desc">공모전 공식 발표일로 부터 새로 제작된 게임이어야 합니다.</div></div>
+    <div class="rule-card"><div class="rule-num">08</div><div class="rule-title">심사기준</div><div class="rule-desc">작성중</div></div>
   </div>
 </section>
 
@@ -463,41 +414,18 @@
   <div class="section-label">진행 일정</div>
   <h2 class="section-title">날짜를 기억하세요</h2>
   <div class="timeline">
-    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 DAY 0 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:0.8rem;color:var(--gray)">DAY 0</span></div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">공모전 공개</div><div class="tl-desc">테마 공개. 개발 시작. 제출처 오픈.</div></div></div>
-    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 마감일 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:0.8rem;color:var(--gray)">2026. 9.4</span></div><div class="tl-dot" style="background:var(--accent);border-color:var(--accent)"></div><div class="tl-content"><div class="tl-title">제출 마감</div><div class="tl-desc">23:39까지 제출</div></div></div>
+    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 DAY 0 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:1.5rem;color:var(--gray)">DAY 0</span></div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">공모전 공개</div><div class="tl-desc">테마 공개. 개발 시작. 제출처 오픈.</div></div></div>
+    <div class="timeline-item"><div class="tl-date">미정<br><!-- 타임라인 마감일 보조 텍스트 크기(font-size:0.8rem) --><span style="font-size:1.5rem;color:var(--gray)">2026. 9.4</span></div><div class="tl-dot" style="background:var(--accent);border-color:var(--accent)"></div><div class="tl-content"><div class="tl-title">제출 마감</div><div class="tl-desc">23:39까지 제출</div></div></div>
   </div>
 </section>
 
 <section id="prizes">
-  <div class="section-label">시상 및 리워드</div>
-  <h2 class="section-title">명예와 상품권</h2>
+  <div class="section-label">시상 및 상품</div>
+  <h2 class="section-title">소정의 기념품</h2>
   <div class="prizes-grid">
-    <div class="prize-card gold"><div class="prize-rank">🥇</div><div class="prize-title">대상</div><div class="prize-reward">미정</div><div class="prize-note">72만원</div></div>
-    <div class="prize-card"><div class="prize-rank">🥈</div><div class="prize-title">금상</div><div class="prize-reward">미정</div><div class="prize-note">28만원</div></div>
-    <div class="prize-card"><div class="prize-rank">🏅</div><div class="prize-title">은상</div><div class="prize-reward">특별상</div><div class="prize-note">14.4만원</div></div>
-    <div class="prize-card sponsor"><div class="prize-rank">🎖️</div><div class="prize-title">후원자 상</div><div class="prize-reward">스폰서 특별 리워드</div><div class="prize-note">세부 혜택 추후 공개</div></div>
-  </div>
-</section>
-
-<section id="sponsors">
-  <div class="section-label">후원</div>
-  <h2 class="section-title">함께 만드는 1.44MB 챌린지</h2>
-  <div class="sponsors-grid">
-    <div class="sponsor-card">
-      <div class="sponsor-logo-slot">SPONSOR<br>LOGO SLOT</div>
-      <div class="sponsor-name">메인 스폰서 자리</div>
-      <div class="sponsor-desc">이곳에 후원사 로고를 배치할 수 있습니다. PNG/SVG 로고 교체만으로 바로 반영됩니다.</div>
-    </div>
-    <div class="sponsor-card">
-      <div class="sponsor-logo-slot">PARTNER<br>LOGO SLOT</div>
-      <div class="sponsor-name">파트너 스폰서 자리</div>
-      <div class="sponsor-desc">행사 홍보, 인디 개발 지원, 커뮤니티 운영을 함께하는 파트너 로고 영역입니다.</div>
-    </div>
-    <div class="sponsor-card">
-      <div class="sponsor-logo-slot">MEDIA<br>LOGO SLOT</div>
-      <div class="sponsor-name">미디어/커뮤니티 자리</div>
-      <div class="sponsor-desc">미디어 및 커뮤니티 후원 로고를 동일한 스타일로 확장해 추가할 수 있습니다.</div>
-    </div>
+    <div class="prize-card gold"><div class="prize-rank">🥇</div><div class="prize-title">대상</div><div class="prize-reward">게임이 담긴 디스켓</div><div class="prize-note">72만원</div></div>
+    <div class="prize-card"><div class="prize-rank">🥈</div><div class="prize-title">금상</div><div class="prize-reward">게임이 담긴 디스켓</div><div class="prize-note">28만원</div></div>
+    <div class="prize-card"><div class="prize-rank">🏅</div><div class="prize-title">은상</div><div class="prize-reward">게임이 담긴 디스켓</div><div class="prize-note">14.4만원</div></div>
   </div>
 </section>
 
@@ -510,17 +438,17 @@
   </div>
 </section>
 
-<section class="cta-section" id="join">
+<section class="cta-section" id="join">`
   <div class="cta-title">준비됐나요?<br>담아보세요<span class="cursor"></span></div>
   <p class="cta-sub">1,474,560 바이트. 한 바이트도 낭비하지 마세요.</p>
   <!-- 하단 CTA '게임제출하기' 버튼 텍스트 크기(font-size:0.9rem) -->
-  <a href="https://itch.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:0.9rem;padding:18px 48px">게임제출하기</a>
+  <a href="https://forms.gle/BLaabf5hqMDibkcw9" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:2rem;padding:18px 48px">게임제출하기</a>
 </section>
 
 <footer>
-  <div>1.44MB JAM — 제약에 관한 개인 게임 잼</div>
+  <div>1.44MB GAME CONTEST</div>
   <div>
-    Hosted on <a href="https://itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a> ·
+    Hosted on <a href="https://forms.gle/BLaabf5hqMDibkcw9" target="_blank" rel="noopener noreferrer">구글폼</a> ·
     <a href="index.html">2P 게임 아케이드</a>
   </div>
 </footer>
