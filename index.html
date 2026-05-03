@@ -1,66 +1,210 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2P 게임 아케이드</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=DungGeunMo&display=swap" rel="stylesheet">
-
-    <!-- 스타일 시트 연결 -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2P 게임 아케이드</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=DungGeunMo&display=swap" rel="stylesheet">
+<!-- 스타일 시트 연결 -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-    <h1>2P 게임 아케이드</h1>
-        <nav>
-            <a href="index.html"class="active">행사 소개</a>
-            <a href="2025.html">2025년</a>
-            <a href="2024.html">2024년</a>
-            <a href="contest-144mb.html">공모전</a>
-            <a href="https://www.instagram.com/2pgamearcade" target="_blank">📷 인스타그램</a>
-            <a href="about.html">ABOUT</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <section class="event-info">
-        <h2>🎮 2P 게임 아케이드 – 협력과 경쟁이 함께하는 즐거운 순간!</h2>
-        <p>2P 게임 아케이드는 협력과 경쟁을 테마로 하는 특별한 게임 행사입니다! 🎮✨</p>
-        <p>친구와 함께 경쟁하고 협력하면서 새로운 형태의 게임전시회를 체험해보세요.</p>
-        <p>혹시 1P로 오시더라도 같이 게임 할 수 있는 2P-NPC가 함께 합니다!</p>
-        <p>행사장에는 서바이벌 대회, 제비뽑기, 미니 이벤트 등 다양한 프로그램이 준비되어 있습니다.</p>
-        <p>입장하시면 코인이 지급되며, 이벤트 참여로 추가 획득 가능! </p>
-        <p>코인은 제비뽑기, 미니 이벤트 참가 등 다양하게 사용 하실 수 있습니다.🎟️</p>
-        <p>올해도 함께 게임을 즐겨봐요!</p>
-            
-        <div class="event-details">
-            <p>📅 <strong>일정:</strong> 2025년 6월 7일</p>
-            <p>📍 <strong>장소:</strong> 서울 종각역 마우스 포테이토</p>
-            <p>🎟️ <strong>입장료:</strong> 14,000원 (사전 예매 시 12,000원)</p>
+<!-- 상단 네비 -->
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <span class="badge-2p">2P</span>
+      게임 아케이드
+    </a>
+    <nav class="primary">
+      <a href="index.html" class="active">행사 소개</a>
+      <a href="2025.html">2025년</a>
+      <a href="2024.html">2024년</a>
+      <a href="contest-144mb.html">공모전</a>
+      <a href="https://www.instagram.com/2pgamearcade" target="_blank">📷 인스타그램</a>
+      <a href="about.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 히어로: 1.44MB 공모전 -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        SPECIAL TRACK · NOW OPEN
+      </div>
+      <h1>
+        용량은 <span class="accent">1.44MB</span><br>
+        상상력은 무제한.
+      </h1>
+      <p class="hero-sub">
+        단 한 장의 플로피 디스크에 담을 수 있는 만큼의 게임.
+        2P 게임 아케이드의 특별 트랙, 1.44MB 공모전이 시작됩니다.
+      </p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="label">CAPACITY</span>
+          <span class="value">≤ 1.44 MB</span>
         </div>
-
-        <a href="https://minimap.net/store/item/2p-game-arcade-2025?l=kr" class="button">미니맵에서 사전 예매하기</a>
-    </section>
-    <section class="contest-preview contest-144mb">
-        <h2>1.44MB 공모전</h2>
-        <p>1.44MB 용량 제한 안에서 창의적인 게임 아이디어를 선보이는 특별 트랙입니다.</p>
-        <p>참가 규정과 일정 업데이트를 확인하고 지금 바로 도전해 보세요.</p>
-        <img src="assets/contest_poster.png" alt="1.44MB 공모전 포스터" class="contest-poster">
-        <div class="contest-actions">
-            <a href="contest-144mb.html" class="button">1.44MB 공모전 상세 보기</a>
-            <a href="contest.html" class="button">일반 공모전 상세 보기</a>
-            <a href="https://www.instagram.com/2pgamearcade" class="button" target="_blank" rel="noopener noreferrer">업데이트 페이지 보기</a>
+        <div class="hero-meta-item">
+          <span class="label">PLATFORM</span>
+          <span class="value">itch.io 호스팅</span>
         </div>
-    </section>
-    </main>
+        <div class="hero-meta-item">
+          <span class="label">FORMAT</span>
+          <span class="value">공모전</span>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a href="contest-144mb.html" class="btn btn-gold">
+          공모전 자세히 보기 →
+        </a>
+        <a href="contest.html" class="btn btn-outline">
+          일반 공모전 보기
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="floppy">
+        <div class="floppy-top">
+          <div class="floppy-shutter"></div>
+        </div>
+        <div class="floppy-label">
+          <div>
+            <div class="title">1.44MB JAM</div>
+            <div class="capacity">FLOPPY DISK / HD</div>
+          </div>
+          <div class="meta">
+            2P GAME ARCADE<br>
+            SPECIAL CONTEST · 2025
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>© 2025 2P 게임 아케이드</p>
-        <p> made by mecagun / ji soo </p>
-    </footer>
+<!-- 행사 소개 -->
+<section class="block">
+  <div class="block-inner">
+    <div class="section-label">ABOUT THE EVENT</div>
+    <h2 class="section-title">2P 게임 아케이드란?</h2>
+    <p class="section-desc">
+      협력과 경쟁을 테마로 하는 특별한 게임 행사. 친구와 함께 경쟁하고 협력하며
+      새로운 형태의 게임 전시회를 체험해보세요.
+    </p>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">🎮</div>
+        <h3>2P 협력 & 경쟁</h3>
+        <p>두 사람이 함께해야 더 즐거운 2P 전용 게임들을 한자리에서. 1P로 오셔도 2P-NPC가 함께합니다.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🪙</div>
+        <h3>코인 시스템</h3>
+        <p>입장 시 코인이 지급되고, 이벤트 참여로 추가 획득. 제비뽑기·미니 이벤트에 사용하세요.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🏆</div>
+        <h3>서바이벌 대회</h3>
+        <p>행사장 한복판에서 펼쳐지는 토너먼트. 협력 모드부터 PvP까지, 다양한 종목이 준비됩니다.</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🎟️</div>
+        <h3>제비뽑기 & 미니 이벤트</h3>
+        <p>코인을 모아 제비뽑기에 도전. 깜짝 미니 이벤트도 곳곳에서 진행됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 이벤트 일정 -->
+<section class="block alt">
+  <div class="block-inner">
+    <div class="event-card">
+      <div>
+        <h3>2025 행사 안내</h3>
+        <p>올해도 함께 게임을 즐겨봐요. 사전 예매 시 입장료 할인.</p>
+        <ul class="event-details-list">
+          <li>
+            <div class="ico">📅</div>
+            <div>
+              <span class="label">DATE</span>
+              <span class="value">2025년 6월 7일</span>
+            </div>
+          </li>
+          <li>
+            <div class="ico">📍</div>
+            <div>
+              <span class="label">PLACE</span>
+              <span class="value">서울 종각역 마우스 포테이토</span>
+            </div>
+          </li>
+          <li>
+            <div class="ico">🎟️</div>
+            <div>
+              <span class="label">TICKET</span>
+              <span class="value">14,000원 <small style="color:var(--ink-500);font-weight:500;">(사전 예매 12,000원)</small></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div style="text-align:center;">
+        <p style="margin-bottom:16px;color:var(--ink-500);font-size:14px;">
+          좌석이 한정되어 있습니다.<br>사전 예매를 추천드려요.
+        </p>
+        <a href="https://minimap.net/store/item/2p-game-arcade-2025?l=kr" class="btn btn-primary">
+          미니맵에서 사전 예매하기 →
+        </a>
+        <div style="margin-top:20px;">
+          <a href="https://www.instagram.com/2pgamearcade" target="_blank"
+             style="color:var(--blue-600);text-decoration:none;font-size:14px;">
+            📷 인스타그램에서 업데이트 보기
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-inner">
+    <div class="brand-block">
+      <div class="brand-name">2P GAME ARCADE</div>
+      <p>
+        협력과 경쟁이 함께하는 즐거운 순간.<br>
+        한 자리에서 펼쳐지는 2P 전용 게임 페스티벌.
+      </p>
+    </div>
+    <div>
+      <h4>EVENT</h4>
+      <ul>
+        <li><a href="index.html">행사 소개</a></li>
+        <li><a href="2025.html">2025년</a></li>
+        <li><a href="2024.html">2024년</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>CONTEST</h4>
+      <ul>
+        <li><a href="contest-144mb.html">1.44MB 공모전</a></li>
+        <li><a href="contest.html">일반 공모전</a></li>
+        <li><a href="https://www.instagram.com/2pgamearcade" target="_blank">📷 인스타그램</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 2P 게임 아케이드</span>
+    <span>made by mecagun / ji soo</span>
+  </div>
+</footer>
+
 </body>
 </html>
