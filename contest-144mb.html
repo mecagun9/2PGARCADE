@@ -56,7 +56,8 @@
     .section-head { display:flex; gap:20px; align-items:end; justify-content:space-between; margin-bottom:38px; padding-bottom:16px; border-bottom:2px solid var(--ink); }
     h2 { margin:8px 0 0; font:clamp(54px,8vw,108px)/1.18 var(--pixel); letter-spacing:-3px; }
     .section-code { color:var(--muted); font:14px/1.7 var(--pixel); text-align:right; }
-    .intro { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(25px,7vw,100px); background:#ded4c1; }
+    .intro { background:#ded4c1; }
+    .intro-content { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(25px,7vw,100px); }
     .intro-mark { color:var(--orange); font:clamp(68px,10vw,128px)/.8 var(--pixel); letter-spacing:-10px; }
     .intro p { margin:0 0 32px; max-width:900px; font-size:clamp(36px,4vw,50px); line-height:1.6; }
     .intro .tiny { color:var(--muted); font:16px/1.9 var(--pixel); }
@@ -107,6 +108,17 @@
     .passed-list li { min-height:58px; display:flex; align-items:center; padding:14px 16px; color:var(--paper); background:#20211d; border-right:1px solid #5f5e57; border-bottom:1px solid #5f5e57; font-size:20px; line-height:1.45; overflow-wrap:anywhere; word-break:normal; transition:.18s; }
     .passed-list li:hover { color:var(--ink); background:var(--amber); }
 
+    .collapsible-section { padding-block:clamp(28px,4vw,48px); }
+    .section-disclosure > summary { list-style:none; }
+    .section-disclosure > summary::-webkit-details-marker { display:none; }
+    .section-disclosure > .disclosure-summary { position:relative; margin-bottom:0; padding-right:72px; cursor:pointer; user-select:none; transition:color .2s,border-color .2s; }
+    .section-disclosure[open] > .disclosure-summary { margin-bottom:38px; }
+    .disclosure-summary h2 { font-size:clamp(34px,5vw,64px); letter-spacing:0; }
+    .disclosure-summary::after { content:'+'; position:absolute; right:0; bottom:16px; width:44px; height:44px; display:grid; place-items:center; border:2px solid currentColor; font:24px/1 var(--pixel); }
+    .section-disclosure[open] > .disclosure-summary::after { content:'-'; }
+    .disclosure-summary:hover, .disclosure-summary:focus-visible { color:var(--amber); }
+    .disclosure-summary:focus-visible { outline:3px solid var(--cyan); outline-offset:8px; }
+
     .prizes { color:var(--paper); background:var(--ink); }
     .prizes .section-head { border-color:#5e5d56; }
     .prize-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
@@ -140,7 +152,7 @@
     .window-close { cursor:pointer; border:0; background:transparent; font:10px var(--pixel); }
     .window-body { padding:16px; white-space:pre-line; }
 
-    @media (max-width:850px) { .hero,.intro,.lab-grid { grid-template-columns:1fr; } .floppy-wrap { margin:25px 0 35px; } .rules-grid { grid-template-columns:repeat(2,1fr); } .hero { padding-bottom:75px; } }
+    @media (max-width:850px) { .hero,.intro-content,.lab-grid { grid-template-columns:1fr; } .floppy-wrap { margin:25px 0 35px; } .rules-grid { grid-template-columns:repeat(2,1fr); } .hero { padding-bottom:75px; } }
     @media (max-width:540px) { .nav-links a:not(:last-child) { display:none; } h1 { font-size:86px; letter-spacing:-7px; } .section-head { align-items:start; flex-direction:column; } .section-code { text-align:left; } .rules-grid,.prize-grid,.passed-list { grid-template-columns:1fr; } .rule { min-height:175px; } .rule h3 { margin-top:32px; } .timeline-row { grid-template-columns:1fr; gap:8px; } footer { flex-direction:column; } }
     @media (prefers-reduced-motion:reduce) { *,*:before,*:after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } .cursor-pixel { display:none; } }
   </style>
@@ -155,9 +167,9 @@
       <div class="scroll">↓ SCROLL TO BOOT</div>
     </header>
 
-    <section class="intro" id="intro"><div class="intro-mark reveal">1.44</div><div class="reveal"><div class="eyebrow">공모전 소개</div><h2>왜 1.44MB인가?</h2><p>1997년, 하이텔 게임제작 동호회의 <b>100Kbyte 게임 공모전</b>을 모티브로 재미있는 시도를 시작합니다.</p><p>1.44MB 이하 게임 개발 공모전. 얼마나 큰 용량인지만 잊지 마세요.</p><div class="tiny">1.44MB JAM / FIT IT ON A FLOPPY / NO BYTE WASTED</div></div></section>
+    <section class="intro collapsible-section" id="intro"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">공모전 소개</div><h2>왜 1.44MB인가?</h2></div><div class="section-code">ABOUT THE CONTEST<br>READ MORE</div></summary><div class="intro-content"><div class="intro-mark reveal">1.44</div><div class="reveal"><p>1997년, 하이텔 게임제작 동호회의 <b>100Kbyte 게임 공모전</b>을 모티브로 재미있는 시도를 시작합니다.</p><p>1.44MB 이하 게임 개발 공모전. 얼마나 큰 용량인지만 잊지 마세요.</p><div class="tiny">1.44MB JAM / FIT IT ON A FLOPPY / NO BYTE WASTED</div></div></div></details></section>
 
-    <section class="lab" id="lab"><div class="section-head reveal"><div><div class="eyebrow">DISK LAB_</div><h2>바이트를 배분해보세요</h2></div><div class="section-code">TRACK 00 / SECTOR 01<br>CALCULATOR READY</div></div><div class="lab-grid">
+    <section class="lab collapsible-section" id="lab"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">DISK LAB_</div><h2>바이트를 배분해보세요</h2></div><div class="section-code">TRACK 00 / SECTOR 01<br>CALCULATOR READY</div></summary><div class="lab-grid">
       <div class="meter-box reveal"><div class="box-label">DISK_USAGE_SIMULATOR.EXE</div><div class="meter-readout"><span id="byte-count">619,315</span> BYTES<small id="byte-percent">42.00% OF DISK CAPACITY</small></div><div class="bar"><div class="bar-fill" id="bar-fill"></div></div><input id="byte-slider" type="range" min="0" max="1769472" value="619315" aria-label="예상 게임 용량"><div class="preset-row"><button class="preset" data-size="102400">100KB</button><button class="preset" data-size="619315">TINY GAME</button><button class="preset" data-size="1474560">EXACT FIT</button><button class="preset" data-size="1600000">TOO BIG</button></div></div>
       <div class="terminal reveal"><div class="terminal-dots"><i></i><i></i><i></i></div><pre id="terminal-output">A:\&gt; CHKDSK GAME.EXE
 SCANNING CLUSTERS...
@@ -165,15 +177,15 @@ SCANNING CLUSTERS...
 855,245 BYTES FREE
 
 STATUS: ROOM TO EXPERIMENT_</pre><button class="term-btn" id="rerun">[ RUN RANDOM BUILD ]</button></div>
-    </div></section>
+    </div></details></section>
 
-    <section class="rules" id="rules"><div class="section-head reveal"><div><div class="eyebrow">공모전 규칙</div><h2>디스크의 법칙</h2></div><div class="section-code">8 RULES<br>READ CAREFULLY_</div></div><div class="rules-grid reveal">
+    <section class="rules collapsible-section" id="rules"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">공모전 규칙</div><h2>디스크의 법칙</h2></div><div class="section-code">8 RULES<br>READ CAREFULLY_</div></summary><div class="rules-grid reveal">
       <article class="rule"><div class="rule-num">01</div><h3>용량 제한</h3><p>압축 해제 후 전체 용량이 1,474,560 바이트 이하여야 합니다.</p></article><article class="rule"><div class="rule-num">02</div><h3>오리지널 작품</h3><p>공모전 공개 후 제작되어야 하며 제출 마감일 밤 11:59까지 접수해야 합니다.</p></article><article class="rule"><div class="rule-num">03</div><h3>엔진 자유</h3><p>엔진 제한 없음. 단 실행 파일·런타임 포함 용량을 초과하면 안됩니다.</p></article><article class="rule"><div class="rule-num">04</div><h3>실행파일</h3><p>독립 실행파일로 플레이 가능한 게임이어야 합니다. 웹브라우저 게임은 금지됩니다.</p></article><article class="rule"><div class="rule-num">05</div><h3>솔로 또는 팀</h3><p>개인 또는 팀 제출 모두 가능합니다.</p></article><article class="rule"><div class="rule-num">06</div><h3>콘텐츠</h3><p>상식선에서의 제작 가이드라인을 준수해야 합니다.</p></article><article class="rule"><div class="rule-num">07</div><h3>개발 시작시기</h3><p>공모전 공식 발표일로부터 새로 제작된 게임이어야 합니다.</p></article><article class="rule"><div class="rule-num">08</div><h3>심사기준</h3><p>1.게임을 완성했는지. 2.용량을 초과했는지. 3.게임이 재미있는지.</p></article>
-    </div></section>
+    </div></details></section>
 
-    <section class="timeline"><div class="section-head reveal"><div><div class="eyebrow">진행 일정</div><h2>날짜를 기억하세요</h2></div><div class="section-code">DON'T MISS<br>THE DEADLINE</div></div><div class="timeline-row reveal"><div class="timeline-date">DAY 0 / 26.5.23 ~ </div><div><h3>공모전 공개</h3><p>개발 시작. 제출처 오픈.</p></div></div><div class="timeline-row reveal"><div class="timeline-date">2026. 09. 04</div><div><h3>제출 마감</h3><p>23:39까지 제출. 한 바이트도 낭비 없이.</p></div></div></section>
+    <section class="timeline collapsible-section"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">진행 일정</div><h2>날짜를 기억하세요</h2></div><div class="section-code">DON'T MISS<br>THE DEADLINE</div></summary><div class="timeline-row reveal"><div class="timeline-date">DAY 0 / 26.5.23 ~ </div><div><h3>공모전 공개</h3><p>개발 시작. 제출처 오픈.</p></div></div><div class="timeline-row reveal"><div class="timeline-date">2026. 09. 04</div><div><h3>제출 마감</h3><p>23:39까지 제출. 한 바이트도 낭비 없이.</p></div></div></details></section>
 
-    <section class="passed" id="passed"><div class="section-head reveal"><div><div class="eyebrow">1차 심사 통과작</div><h2>PASS LIST</h2></div><div class="section-code">ROUND 01<br>GAME TITLES ONLY</div></div><figure class="passed-badge reveal"><img src="assets/1st-round-nominated.png" alt="1.44MB 게임 개발 공모전 1차 노미네이트" width="1254" height="1254" loading="lazy" decoding="async"></figure><ul class="passed-list reveal">
+    <section class="passed" id="passed"><div class="section-head"><div><div class="eyebrow">1차 심사 통과작</div><h2>PASS LIST</h2></div><div class="section-code">ROUND 01<br>GAME TITLES ONLY</div></div><figure class="passed-badge"><img src="assets/1st-round-nominated.png" alt="1.44MB 게임 개발 공모전 1차 노미네이트" width="1254" height="1254" loading="lazy" decoding="async"></figure><ul class="passed-list">
       <li>DEFRAG[ThunderRabbitStudio]</li>
       <li>Mirco Park</li>
       <li>Trillium</li>
@@ -235,9 +247,9 @@ STATUS: ROOM TO EXPERIMENT_</pre><button class="term-btn" id="rerun">[ RUN RANDO
       <li>FloppyDungeon</li>
   </ul></section>
 
-    <section class="prizes"><div class="section-head reveal"><div><div class="eyebrow">시상 및 상품</div><h2>소정의 기념품</h2></div><div class="section-code">SAVE AS<br>WINNER.EXE</div></div><div class="prize-grid reveal"><article class="prize"><b>01 / 대상</b><strong>72만원</strong><span>게임이 담긴 디스켓</span></article><article class="prize"><b>02 / 금상</b><strong>28만원</strong><span>게임이 담긴 디스켓</span></article><article class="prize"><b>03 / 은상</b><strong>14.4만원</strong><span>게임이 담긴 디스켓</span></article></div></section>
+    <section class="prizes collapsible-section"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">시상 및 상품</div><h2>소정의 기념품</h2></div><div class="section-code">SAVE AS<br>WINNER.EXE</div></summary><div class="prize-grid reveal"><article class="prize"><b>01 / 대상</b><strong>72만원</strong><span>게임이 담긴 디스켓</span></article><article class="prize"><b>02 / 금상</b><strong>28만원</strong><span>게임이 담긴 디스켓</span></article><article class="prize"><b>03 / 은상</b><strong>14.4만원</strong><span>게임이 담긴 디스켓</span></article></div></details></section>
 
-    <section class="faq" id="faq"><div class="section-head reveal"><div><div class="eyebrow">자주 묻는 질문</div><h2>궁금한 게 있나요?</h2></div><div class="section-code">HELP.COM<br>2 ENTRIES</div></div><div class="reveal"><article class="faq-item"><button class="faq-q">1.44MB는 정확히 어떻게 측정하나요?<span>+</span></button><div class="faq-a"><p>3.5인치 HD 플로피의 실제 물리적 용량인 1,474,560 바이트를 기준으로 합니다. 압축 해제 후 기준입니다.</p></div></article><article class="faq-item"><button class="faq-q">게임 내부 압축 사용이 가능한가요?<span>+</span></button><div class="faq-a"><p>네. 단 최종 실행 가능한 전체 크기가 1,474,560 바이트 이하여야 합니다.</p></div></article></div></section>
+    <section class="faq collapsible-section" id="faq"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">자주 묻는 질문</div><h2>궁금한 게 있나요?</h2></div><div class="section-code">HELP.COM<br>2 ENTRIES</div></summary><div class="reveal"><article class="faq-item"><button class="faq-q">1.44MB는 정확히 어떻게 측정하나요?<span>+</span></button><div class="faq-a"><p>3.5인치 HD 플로피의 실제 물리적 용량인 1,474,560 바이트를 기준으로 합니다. 압축 해제 후 기준입니다.</p></div></article><article class="faq-item"><button class="faq-q">게임 내부 압축 사용이 가능한가요?<span>+</span></button><div class="faq-a"><p>네. 단 최종 실행 가능한 전체 크기가 1,474,560 바이트 이하여야 합니다.</p></div></article></div></details></section>
 
     <section class="cta" id="submit"><h2 class="reveal">READY?<br>담아보세요<span class="pixel">_</span></h2><p class="reveal">1,474,560 바이트. 한 바이트도 낭비하지 마세요.</p><a class="submit reveal" href="https://forms.gle/BLaabf5hqMDibkcw9" target="_blank" rel="noopener noreferrer">게임 제출하기 →</a></section>
   </main>
@@ -271,6 +283,18 @@ STATUS: READY TO BUILD_</div></aside>
     document.querySelector('#rerun').addEventListener('click', () => updateMeter(Math.round(60000 + Math.random() * 1680000)));
 
     document.querySelectorAll('.faq-q').forEach(button => button.addEventListener('click', () => button.closest('.faq-item').classList.toggle('open')));
+    function openLinkedSection() {
+      const target = document.querySelector(location.hash);
+      const disclosure = target?.querySelector(':scope > .section-disclosure');
+      if (disclosure) disclosure.open = true;
+    }
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => link.addEventListener('click', () => {
+      const target = document.querySelector(link.getAttribute('href'));
+      const disclosure = target?.querySelector(':scope > .section-disclosure');
+      if (disclosure) disclosure.open = true;
+    }));
+    window.addEventListener('hashchange', openLinkedSection);
+    openLinkedSection();
     const reveal = new IntersectionObserver(entries => entries.forEach(entry => entry.target.classList.toggle('visible', entry.isIntersecting)), { threshold:.12 });
     document.querySelectorAll('.reveal').forEach(element => reveal.observe(element));
 
