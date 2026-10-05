@@ -101,6 +101,8 @@
     .passed { color:var(--paper); background:#171814; }
     .passed .section-head { border-color:#5e5d56; }
     .passed h2 { color:var(--amber); }
+    .passed-badge { width:min(100%,720px); margin:0 auto 48px; }
+    .passed-badge img { display:block; width:100%; height:auto; aspect-ratio:1; object-fit:contain; }
     .passed-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); list-style:none; margin:0; padding:0; border-top:1px solid #5f5e57; border-left:1px solid #5f5e57; }
     .passed-list li { min-height:58px; display:flex; align-items:center; padding:14px 16px; color:var(--paper); background:#20211d; border-right:1px solid #5f5e57; border-bottom:1px solid #5f5e57; font-size:20px; line-height:1.45; overflow-wrap:anywhere; word-break:normal; transition:.18s; }
     .passed-list li:hover { color:var(--ink); background:var(--amber); }
@@ -171,7 +173,7 @@ STATUS: ROOM TO EXPERIMENT_</pre><button class="term-btn" id="rerun">[ RUN RANDO
 
     <section class="timeline"><div class="section-head reveal"><div><div class="eyebrow">진행 일정</div><h2>날짜를 기억하세요</h2></div><div class="section-code">DON'T MISS<br>THE DEADLINE</div></div><div class="timeline-row reveal"><div class="timeline-date">DAY 0 / 26.5.23 ~ </div><div><h3>공모전 공개</h3><p>개발 시작. 제출처 오픈.</p></div></div><div class="timeline-row reveal"><div class="timeline-date">2026. 09. 04</div><div><h3>제출 마감</h3><p>23:39까지 제출. 한 바이트도 낭비 없이.</p></div></div></section>
 
-    <section class="passed" id="passed"><div class="section-head reveal"><div><div class="eyebrow">1차 심사 통과작</div><h2>PASS LIST</h2></div><div class="section-code">ROUND 01<br>GAME TITLES ONLY</div></div><ul class="passed-list reveal">
+    <section class="passed" id="passed"><div class="section-head reveal"><div><div class="eyebrow">1차 심사 통과작</div><h2>PASS LIST</h2></div><div class="section-code">ROUND 01<br>GAME TITLES ONLY</div></div><figure class="passed-badge reveal"><img src="assets/1st-round-nominated.png" alt="1.44MB 게임 개발 공모전 1차 노미네이트" width="1254" height="1254" loading="lazy" decoding="async"></figure><ul class="passed-list reveal">
       <li>DEFRAG[ThunderRabbitStudio]</li>
       <li>Mirco Park</li>
       <li>Trillium</li>
