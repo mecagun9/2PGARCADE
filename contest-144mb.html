@@ -99,6 +99,16 @@
     .timeline-row h3 { margin:0 0 12px; font:26px/1.5 var(--pixel); }
     .timeline-row p { margin:0; color:#655e51; font-size:34px; line-height:1.55; }
 
+    .winners { color:var(--paper); background:#22231f; }
+    .winners .section-head { border-color:#5e5d56; }
+    .winners h2 { color:var(--amber); }
+    .winner-group-title { margin:38px 0 18px; color:var(--cyan); font-size:24px; }
+    .winner-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:12px; }
+    .winner-card { padding:22px; border:1px solid #5f5e57; border-top:4px solid var(--orange); background:#171814; overflow-wrap:anywhere; }
+    .winner-award { display:block; color:var(--amber); font-size:16px; font-weight:bold; }
+    .winner-title { display:block; margin-top:14px; font-size:23px; line-height:1.4; }
+    .winner-country { display:block; margin-top:7px; color:#b9b2a5; font-size:16px; }
+
     .passed { color:var(--paper); background:#171814; }
     .passed .section-head { border-color:#5e5d56; }
     .passed h2 { color:var(--amber); }
@@ -160,7 +170,7 @@
 </head>
 <body>
   <div class="grain"></div><div class="scanlines"></div>
-  <nav><a class="brand" href="#top">2P_GAME_ARCADE</a><div class="nav-links"><a href="#intro">ABOUT</a><a href="#rules">RULES</a><a href="#passed">PASS</a><a href="#faq">FAQ</a><a href="#submit">SUBMIT</a></div></nav>
+  <nav><a class="brand" href="#top">2P_GAME_ARCADE</a><div class="nav-links"><a href="#intro">ABOUT</a><a href="#rules">RULES</a><a href="#winners">WINNERS</a><a href="#passed">PASS</a><a href="#faq">FAQ</a><a href="#submit">SUBMIT</a></div></nav>
   <main>
     <header class="hero" id="top">
       <div class="hero-copy"><div class="kicker">// GAME_DEV CONTEST_2026</div><h1>1.44<span>MEGABYTES MAX</span></h1><div class="byte-tag">1,474,560 BYTES<br>FIT IT ON A FLOPPY_</div><div class="hero-meta"><b>~ 26. 09. 04</b><b>누구나 참가</b><b>엔진 자유</b></div></div>
@@ -185,6 +195,25 @@ STATUS: ROOM TO EXPERIMENT_</pre><button class="term-btn" id="rerun">[ RUN RANDO
     </div></details></section>
 
     <section class="timeline collapsible-section"><details class="section-disclosure"><summary class="section-head disclosure-summary"><div><div class="eyebrow">진행 일정</div><h2>날짜를 기억하세요</h2></div><div class="section-code">DON'T MISS<br>THE DEADLINE</div></summary><div class="timeline-row reveal"><div class="timeline-date">DAY 0 / 26.5.23 ~ </div><div><h3>공모전 공개</h3><p>개발 시작. 제출처 오픈.</p></div></div><div class="timeline-row reveal"><div class="timeline-date">2026. 09. 04</div><div><h3>제출 마감</h3><p>23:39까지 제출. 한 바이트도 낭비 없이.</p></div></div></details></section>
+
+    <section class="winners" id="winners" aria-labelledby="winners-title"><div class="section-head"><div><div class="eyebrow">1.44MB 게임 개발 공모전</div><h2 id="winners-title">수상작</h2></div><div class="section-code">WINNER LIST<br>2026</div></div>
+      <h3 class="winner-group-title">정규상</h3><div class="winner-grid">
+        <article class="winner-card"><span class="winner-award">대상</span><strong class="winner-title">goodbye lumi</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">금상</span><strong class="winner-title">BackroomRun.exe</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">은상</span><strong class="winner-title">Propeller-chan</strong><span class="winner-country">(일본)</span></article>
+      </div>
+      <h3 class="winner-group-title">특별상</h3><div class="winner-grid">
+        <article class="winner-card"><span class="winner-award">미니맵</span><strong class="winner-title">안녕히, 바이러스</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">넥스트스테이지</span><strong class="winner-title">FloppyDungeon</strong><span class="winner-country">(포르투갈)</span></article>
+        <article class="winner-card"><span class="winner-award">싱글코어게임즈</span><strong class="winner-title">TRENCHFOOT</strong><span class="winner-country">(뉴질랜드)</span></article>
+        <article class="winner-card"><span class="winner-award">싱글코어게임즈</span><strong class="winner-title">goodbye lumi</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">바다게임즈</span><strong class="winner-title">BackroomRun.exe</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">인디게임닷컴</span><strong class="winner-title">나혼자학교에잠들었다</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">명지전문대학</span><strong class="winner-title">Last Write(Last Light)</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">청강문화산업대학</span><strong class="winner-title">AFTER CLEAR — 던전 사후처리반</strong><span class="winner-country">(대한민국)</span></article>
+        <article class="winner-card"><span class="winner-award">게임문화재단 게임문화교육원</span><strong class="winner-title">Esc ape, You died?</strong><span class="winner-country">(대한민국)</span></article>
+      </div>
+    </section>
 
     <section class="passed" id="passed"><div class="section-head"><div><div class="eyebrow">1차 심사 통과작</div><h2>PASS LIST</h2></div><div class="section-code">ROUND 01<br>GAME TITLES ONLY</div></div><figure class="passed-badge"><img src="assets/1st-round-nominated.png" alt="1.44MB 게임 개발 공모전 1차 노미네이트" width="1254" height="1254" loading="lazy" decoding="async"></figure><ul class="passed-list">
       <li>DEFRAG[ThunderRabbitStudio]</li>
